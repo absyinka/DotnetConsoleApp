@@ -1,3 +1,4 @@
+using System.Runtime.Intrinsics.X86;
 namespace DotnetConsoleApp.Shared
 {
     public static class Helper
@@ -22,6 +23,28 @@ namespace DotnetConsoleApp.Shared
         public static bool IsValid(int outValue, int start, int end)
         {
             return outValue >= start && outValue <= end;
+        }
+
+        public static DateOnly? TryParseDateOnly(string dateOnlyString)
+        {
+            try
+            {
+                var response = DateOnly.TryParse(dateOnlyString, out DateOnly result) 
+                    ? result 
+                    : DateOnly.MinValue;
+
+                return response;
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Bad format");
+                return DateOnly.MinValue;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+                return null;
+            }
         }
     }
 }

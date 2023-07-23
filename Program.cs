@@ -1,6 +1,4 @@
-﻿using DotnetConsoleApp;
-
-
+﻿
 // Be able to Create an employee record
 // Be able to update an employee record
 // Be able to find employee by employee code
@@ -24,3 +22,10 @@
 
 // Console.WriteLine($"Last Index: {lastIndex}");
 // Console.WriteLine($"Last Value: {lastValue}");
+
+var dateOnly = new DateOnly(2023, 05, 23);
+var dateTime = new DateTime(2023, 05, 23);
+
+Console.WriteLine(dateOnly);
+Console.WriteLine(dateTime);
+

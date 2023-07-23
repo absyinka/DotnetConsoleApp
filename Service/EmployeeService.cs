@@ -14,10 +14,10 @@ namespace DotnetConsoleApp.Service
         public void CreateEmployee(EmployeeDto request)
         {
             Console.Write("Enter firstname: ");
-            request.FirstName = Console.ReadLine();
+            request.FirstName = Console.ReadLine()!;
 
             Console.Write("Enter lastname: ");
-            request.LastName = Console.ReadLine();
+            request.LastName = Console.ReadLine()!;
 
             Console.Write("Enter middlename: ");
             request.MiddleName = Console.ReadLine();
