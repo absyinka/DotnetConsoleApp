@@ -1,18 +1,14 @@
 using DotnetConsoleApp.Enum;
 
-namespace DotnetConsoleApp
+namespace DotnetConsoleApp.Models
 {
-    public class Employee
+    public record EmployeeDto
     {
-        public int Id { get; set; }
-        public string EmployeeCode { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string? MiddleName { get; set; }
         public DateOnly DateOfBirth { get; set; }
         public Gender Gender { get; set; }
         public DateTime DateJoined { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime? Modified { get; set; }
     }
 }
