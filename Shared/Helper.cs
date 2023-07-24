@@ -11,7 +11,7 @@ namespace DotnetConsoleApp.Shared
         public static int SelectEnum(string screenMessage, int validStart, int validEnd)
         {
             int outValue;
-            
+
             do
             {
                 Console.Write(screenMessage);
@@ -29,16 +29,17 @@ namespace DotnetConsoleApp.Shared
         {
             try
             {
-                var response = DateOnly.TryParse(dateOnlyString, out DateOnly result) 
-                    ? result 
-                    : DateOnly.MinValue;
+                var response = DateOnly.TryParse(dateOnlyString, out DateOnly result);
 
-                return response;
+                if (response is false)
+                    throw new FormatException("Bad format provided");
+
+                return result;
             }
-            catch(FormatException)
+            catch (FormatException fe)
             {
-                Console.WriteLine("Bad format");
-                return DateOnly.MinValue;
+                Console.WriteLine(fe.Message);
+                return null;
             }
             catch (Exception ex)
             {

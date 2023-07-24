@@ -1,4 +1,6 @@
 ﻿
+using System.ComponentModel.Design;
+using DotnetConsoleApp.Shared;
 // Be able to Create an employee record
 // Be able to update an employee record
 // Be able to find employee by employee code
@@ -29,3 +31,7 @@ var dateTime = new DateTime(2023, 05, 23);
 Console.WriteLine(dateOnly);
 Console.WriteLine(dateTime);
 
+var testDate = "2001-10-09";
+
+var resp = Helper.TryParseDateOnly(testDate);
+Console.WriteLine(resp);
