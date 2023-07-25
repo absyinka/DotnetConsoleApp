@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abbas Joda\\desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj": {}
+    "C:\\Users\\admin\\Desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abbas Joda\\desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj": {
+    "C:\\Users\\admin\\Desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abbas Joda\\desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj",
         "projectName": "DotnetConsoleApp",
-        "projectPath": "C:\\Users\\Abbas Joda\\desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\Abbas Joda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abbas Joda\\desktop\\DotnetConsoleApp\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\DotnetConsoleApp\\DotnetConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\DotnetConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Abbas Joda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

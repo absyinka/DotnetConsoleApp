@@ -25,27 +25,24 @@ namespace DotnetConsoleApp.Shared
             return outValue >= start && outValue <= end;
         }
 
-        public static DateOnly? TryParseDateOnly(string dateOnlyString)
+        public static DateOnly TryParseDateOnly(string dateOnlyString)
         {
-            try
+            if (!DateOnly.TryParse(dateOnlyString, out DateOnly result))
             {
-                var response = DateOnly.TryParse(dateOnlyString, out DateOnly result);
+                throw new FormatException("Bad date only format provided!");
+            }
 
-                if (response is false)
-                    throw new FormatException("Bad format provided");
+            return result;
+        }
 
-                return result;
-            }
-            catch (FormatException fe)
+        public static DateTime TryParseDateTime(string dateOnlyString)
+        {
+            if (!DateTime.TryParse(dateOnlyString, out DateTime result))
             {
-                Console.WriteLine(fe.Message);
-                return null;
+                throw new FormatException("Bad datetime format provided!");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
-                return null;
-            }
+
+            return result;
         }
     }
 }
