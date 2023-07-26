@@ -1,4 +1,8 @@
-﻿using DotnetConsoleApp.Shared;
+﻿using System.ComponentModel.Design;
+using DotnetConsoleApp.Menu;
+using DotnetConsoleApp.Repository;
+using DotnetConsoleApp.Service;
+using DotnetConsoleApp.Shared;
 // Be able to Create an employee record
 // Be able to update an employee record
 // Be able to find employee by employee code
@@ -22,3 +26,8 @@
 
 // Console.WriteLine($"Last Index: {lastIndex}");
 // Console.WriteLine($"Last Value: {lastValue}");
+
+Console.WriteLine("=========Employee Data Management Application (EDMA)==========");
+var repository = new EmployeeRepository();
+var employeeService = new EmployeeService(repository);
+Menu.MainMenu(employeeService);
