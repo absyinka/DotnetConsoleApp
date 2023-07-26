@@ -22,14 +22,3 @@
 
 // Console.WriteLine($"Last Index: {lastIndex}");
 // Console.WriteLine($"Last Value: {lastValue}");
-
-var dateOnly = new DateOnly(2023, 05, 25).AddDays(3);
-var dateTime = new DateTime(2023, 05, 23, 07, 30, 10);
-
-Console.WriteLine(dateOnly);
-Console.WriteLine(dateTime);
-
-var testDate = "2001-01-10";
-
-var resp = Helper.TryParseDateOnly(testDate);
-Console.WriteLine(resp);

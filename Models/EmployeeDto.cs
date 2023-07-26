@@ -9,6 +9,6 @@ namespace DotnetConsoleApp.Models
         public string? MiddleName { get; set; }
         public DateOnly DateOfBirth { get; set; }
         public Gender Gender { get; set; }
-        public DateTime DateJoined { get; set; }
+        public DateOnly DateJoined { get; set; }
     }
 }

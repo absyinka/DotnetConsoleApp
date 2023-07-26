@@ -29,17 +29,7 @@ namespace DotnetConsoleApp.Shared
         {
             if (!DateOnly.TryParse(dateOnlyString, out DateOnly result))
             {
-                throw new FormatException("Bad date only format provided!");
-            }
-
-            return result;
-        }
-
-        public static DateTime TryParseDateTime(string dateOnlyString)
-        {
-            if (!DateTime.TryParse(dateOnlyString, out DateTime result))
-            {
-                throw new FormatException("Bad datetime format provided!");
+                throw new FormatException("Bad dateOnly format provided!");
             }
 
             return result;
