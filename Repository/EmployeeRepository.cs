@@ -20,6 +20,7 @@ namespace DotnetConsoleApp.Repository
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 MiddleName = request.MiddleName,
+                Email = request.Email,
                 DateOfBirth = request.DateOfBirth,
                 Gender = request.Gender,
                 DateJoined = request.DateJoined,
@@ -32,6 +33,21 @@ namespace DotnetConsoleApp.Repository
         public List<Employee> GetAllEmployees()
         {
             return employees;
+        }
+
+        public Employee FindById(int id)
+        {
+            return employees.Find(x => x.Id == id)!;
+        }
+
+        public Employee FindByCode(string code)
+        {
+            return employees.Find(x => x.EmployeeCode == code)!;
+        }
+
+        public Employee FindByEmail(string email)
+        {
+            return employees.Find(x => x.Email == email)!;
         }
     }
 }

@@ -6,5 +6,8 @@ namespace DotnetConsoleApp.Service
     {
         void CreateEmployee(EmployeeDto request);
         void GetAllEmployees();
+        void ViewEmployee();
+        void UpdateEmployee(EmployeeUpdateDto request);
+        void DeleteEmployee();
     }
 }

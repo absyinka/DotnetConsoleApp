@@ -9,6 +9,7 @@ namespace DotnetConsoleApp.Menu
         {
             bool flag = true;
             var employeeDto = new EmployeeDto();
+            var updateEmployeeDto = new EmployeeUpdateDto();
 
             try
             {
@@ -26,6 +27,18 @@ namespace DotnetConsoleApp.Menu
                             break;
                         case "2":
                             employeeService.GetAllEmployees();
+                            Console.WriteLine("");
+                            break;
+                        case "3":
+                            employeeService.ViewEmployee();
+                            Console.WriteLine("");
+                            break;
+                        case "4":
+                            employeeService.UpdateEmployee(updateEmployeeDto);
+                            Console.WriteLine("");
+                            break;
+                        case "5":
+                            employeeService.DeleteEmployee();
                             Console.WriteLine("");
                             break;
                         case "0":

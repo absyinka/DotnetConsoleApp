@@ -6,5 +6,8 @@ namespace DotnetConsoleApp.Repository
     {
         Employee Create(EmployeeDto request);
         List<Employee> GetAllEmployees();
+        Employee FindById(int id);
+        Employee FindByCode(string code);
+        Employee FindByEmail(string email);
     }
 }
