@@ -15,12 +15,20 @@ namespace DotnetConsoleApp.Shared
             do
             {
                 Console.Write(screenMessage);
-            } while (!(int.TryParse(Console.ReadLine(), out outValue) && IsValid(outValue, validStart, validEnd)));
+
+            } while (!(int.TryParse(Console.ReadLine(), out outValue) && IsValidRange(outValue, validStart, validEnd)));
 
             return outValue;
         }
 
-        public static bool IsValid(int outValue, int start, int end)
+        /// <summary>
+        ///     Check if the value passed is within the valid range provided
+        /// </summary>
+        /// <param name="outValue">Value selected from option</param>
+        /// <param name="start">Valid start value</param>
+        /// <param name="end">Valid end value</param>
+        /// <returns>boolean (t/f)</returns>
+        public static bool IsValidRange(int outValue, int start, int end)
         {
             return outValue >= start && outValue <= end;
         }

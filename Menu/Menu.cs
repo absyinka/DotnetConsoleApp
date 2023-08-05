@@ -18,7 +18,7 @@ namespace DotnetConsoleApp.Menu
                     Console.Write("\nPlease enter your preferred option: ");
                     string option = Console.ReadLine()!;
 
-                    switch (option)
+                    switch (option.ToLower())
                     {
                         case "1":
                             employeeService.CreateEmployee(employeeDto);
@@ -53,7 +53,7 @@ namespace DotnetConsoleApp.Menu
             Console.WriteLine("Enter 3 to View an Employee");
             Console.WriteLine("Enter 4 to Update an Employee");
             Console.WriteLine("Enter 5 to Delete an Employee");
-            Console.WriteLine("Enter 0 to Exit");
+            Console.WriteLine("Enter 0 to exit application");
         }
     }
 }

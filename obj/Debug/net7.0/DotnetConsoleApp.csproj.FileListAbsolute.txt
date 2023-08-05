@@ -28,3 +28,5 @@ C:\Users\Abbas Joda\desktop\DotnetConsoleApp\obj\Debug\net7.0\refint\DotnetConso
 C:\Users\Abbas Joda\desktop\DotnetConsoleApp\obj\Debug\net7.0\DotnetConsoleApp.pdb
 C:\Users\Abbas Joda\desktop\DotnetConsoleApp\obj\Debug\net7.0\DotnetConsoleApp.genruntimeconfig.cache
 C:\Users\Abbas Joda\desktop\DotnetConsoleApp\obj\Debug\net7.0\ref\DotnetConsoleApp.dll
+C:\Users\Abbas Joda\desktop\DotnetConsoleApp\bin\Debug\net7.0\ConsoleTables.dll
+C:\Users\Abbas Joda\desktop\DotnetConsoleApp\obj\Debug\net7.0\DotnetConsoleApp.csproj.CopyComplete

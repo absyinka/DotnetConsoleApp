@@ -1,3 +1,4 @@
+using ConsoleTables;
 using DotnetConsoleApp.Enum;
 using DotnetConsoleApp.Models;
 using DotnetConsoleApp.Repository;
@@ -30,11 +31,11 @@ namespace DotnetConsoleApp.Service
                 int gender = Helper.SelectEnum("Enter employee gender:\nEnter 1 for Male\nEnter 2 for Female: ", 1, 2);
                 request.Gender = (Gender)gender;
 
-                Console.Write("Enter date of birth (2003-01-01): ");
+                Console.Write("Enter date of birth (2003-12-25): ");
                 var dob = Helper.TryParseDateOnly(Console.ReadLine()!);
                 request.DateOfBirth = dob;
 
-                Console.Write("Enter date joined (2003-01-01): ");
+                Console.Write("Enter date joined (2003-12-25): ");
                 var joinedDate = Helper.TryParseDateOnly(Console.ReadLine()!);
                 request.DateJoined = joinedDate;
 
@@ -44,7 +45,9 @@ namespace DotnetConsoleApp.Service
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(ex.Message);
+                Console.ResetColor();
             }
         }
 
@@ -54,10 +57,14 @@ namespace DotnetConsoleApp.Service
             {
                 if (_repository.employees.Count != 0)
                 {
+                    var table = new ConsoleTable("Id", "Employee Code", "Firstname", "Lastname", "Date Joined");
+
                     foreach (var employee in _repository.employees)
                     {
-                        Console.WriteLine($"Id: {employee.Id}\tEmployee code: {employee.EmployeeCode}\tFirstName: {employee.FirstName}\tLastname: {employee.LastName}\tDateJoined: {employee.DateJoined}");
+                        table.AddRow(employee.Id, employee.EmployeeCode, employee.FirstName, employee.LastName, employee.DateJoined);
                     }
+
+                    table.Write(Format.Alternative);
 
                     return;
                 }
