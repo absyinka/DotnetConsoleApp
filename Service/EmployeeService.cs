@@ -1,3 +1,4 @@
+using System;
 using ConsoleTables;
 using DotnetConsoleApp.Constants;
 using DotnetConsoleApp.Enum;
@@ -135,6 +136,8 @@ namespace DotnetConsoleApp.Service
 
                     int genderUpdate = Helper.SelectEnum("Enter employee gender:\nEnter 1 for Male\nEnter 2 for Female: ", 1, 2);
                     employee.Gender = request.Gender = (Gender)genderUpdate;
+
+                    employee.Modified = DateTime.Now;
 
                     Console.WriteLine(Messages.RECORDUPDATED);
                     return;

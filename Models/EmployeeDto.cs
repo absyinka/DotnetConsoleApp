@@ -1,3 +1,4 @@
+using System;
 using DotnetConsoleApp.Enum;
 
 namespace DotnetConsoleApp.Models
